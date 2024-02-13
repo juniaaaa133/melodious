@@ -21,8 +21,8 @@ let initial_data = forms[0]
        setQuests(forms[parseInt(localStorage.getItem('quest_to_show'))]) //Everytime window refresh , data from LS will be stored in usestate;
     }
   }
-},[forms[parseInt(localStorage.getItem('quest_to_show'))]]) //Everytime the client loads , window refresh , it works;
-
+},[]) //Everytime the client loads , window refresh , it works;
+// forms[parseInt(localStorage.getItem('quest_to_show'))]]
 useEffect(()=>{
 if(localStorage !== undefined){
     if(parseInt(localStorage.getItem('quest_to_show')) +1  == forms.length){ //Whenever data in usestate change, this will activate .
