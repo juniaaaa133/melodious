@@ -1,0 +1,35 @@
+.dc-main {
+    padding: 0 40px;
+    margin-top: 100px;
+}
+.dc-title {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 3px;
+}
+.dc-line {
+    width: 40%;
+    height: 2px;
+}
+.dc-ctn {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.dc-desc {
+    margin-bottom: 80px;
+}
+
+@media (max-width: 480px) {
+    .dc-main {
+        padding: 0 20px;
+    }
+    .dc-title {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 3px;
+        margin: 0 auto;
+    }
+}

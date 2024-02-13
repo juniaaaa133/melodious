@@ -1,0 +1,25 @@
+.b-btn {
+    width: 100%;
+    padding: 9px 23px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #6838a3;
+    color:#e7e2e2;
+    border-radius: 23px;
+}
+.b-btn:hover {
+    background-color: #7226ce;
+}
+.w-btn {
+    width: 100%;
+    padding: 9px 23px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #FFA808;
+    color:#282626;
+    border-radius: 23px;
+}
+.w-btn:hover {
+    background-color: #f7963a;
+
+}
