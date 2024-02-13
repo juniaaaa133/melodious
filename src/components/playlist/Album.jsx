@@ -18,19 +18,14 @@ const Album = () => {
   useEffect(()=>{
 if(localStorage.getItem('toast_control') !== null){
 setStyle('open_toast trans')
-console.log('it is toast')
 setTimeout(() => {
   setStyle('close_toast trans')
-  console.log('it is end toast')
   localStorage.removeItem('toast_control')
 }, 3000);
 }else {
   return;
 }
   },[])
-
-  //How to filter videos
-  //LocalStorage Data - 2 : MOODS , 3:  TIME , 4 : WEATHER , 5 : WORK, 6 : COMMUNITY , 7 : SlOWED
 
   let FilterVideoFacade = (RESPONSE) => {
    let filtered_infos = forms.map((data,index) => { //LOCALSTORAGE DATA LOOP
@@ -78,7 +73,6 @@ let FILTERED_VIDEOS_ARRAY = RESPONSE.filter((data,index) => {
   
   })
   setVideos(FILTERED_VIDEOS_ARRAY)
-  console.log(FILTERED_VIDEOS_ARRAY)
   } 
 
   let FetchVideos = async () => {

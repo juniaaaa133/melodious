@@ -11,16 +11,16 @@ const HomePage = () => {
 let [style,setStyle] = useState('close_toast')
 
   useEffect(()=>{
-if(localStorage.getItem('toast_control') !== null){
-setStyle('open_toast trans')
-console.log('it is toast')
-setTimeout(() => {
-  setStyle('close_toast trans')
-  console.log('it is end toast')
-  localStorage.removeItem('toast_control')
-}, 3000);
-}else {
-  return;
+if(localStorage !== undefined){
+  if(localStorage.getItem('toast_control') !== null){
+    setStyle('open_toast trans')
+    setTimeout(() => {
+      setStyle('close_toast trans')
+      localStorage.removeItem('toast_control')
+    }, 3000);
+    }else {
+      return;
+    }
 }
   },[])
 

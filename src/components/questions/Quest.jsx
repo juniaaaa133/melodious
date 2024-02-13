@@ -15,12 +15,10 @@ let initial_data = forms[0]
   if(localStorage !== undefined){
     if(localStorage.getItem('quest_to_show') == null || parseInt(localStorage.getItem('quest_to_show') == NaN)){
         localStorage.setItem('quest_to_show',0); //Initial state or the time when user finish and restart quests.
-        console.log('is null')
 
         setQuests(initial_data) //Everytime window refresh , data from LS will be stored in usestate;
     }else {
        setQuests(forms[parseInt(localStorage.getItem('quest_to_show'))]) //Everytime window refresh , data from LS will be stored in usestate;
-       console.log('is not null') //Continuous state, remembering the quests in LS.
     }
   }
 },[forms[parseInt(localStorage.getItem('quest_to_show'))]]) //Everytime the client loads , window refresh , it works;
